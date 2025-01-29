@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+# Cotizador de Criptomonedas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación web desarrollada con React y TypeScript que permite consultar precios actualizados de criptomonedas en diferentes divisas.
 
-Currently, two official plugins are available:
+## 🚀 Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Consulta en tiempo real de precios de criptomonedas
+- Soporte para múltiples divisas (USD, EUR, GBP, MXN, ARS)
+- Información detallada incluyendo:
+  - Precio actual
+  - Precio más alto del día
+  - Precio más bajo del día
+  - Variación en las últimas 24 horas
+  - Última actualización
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React 18
+- TypeScript
+- Zustand (manejo de estado)
+- Zod (validación de esquemas)
+- Vite
+- Axios
+- CSS puro para los estilos
 
-- Configure the top-level `parserOptions` property like this:
+## 📚 Aprendizajes
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Implementación de TypeScript en un proyecto React
+- Gestión de estado global con Zustand
+- Validación de tipos en tiempo de ejecución con Zod
+- Manejo de APIs externas con Axios
+- Tipado estricto y mejores prácticas de TypeScript
+- Componentes reutilizables y arquitectura limpia
+
+## 🚦 Comenzando
+
+### Prerrequisitos
+
+- Node.js (versión 16 o superior)
+- npm o pnpm
+
+### Instalación
+
+1. Clona el repositorio
+```bash
+git clone [URL del repositorio]
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Instala las dependencias
+```bash
+npm install
 ```
+
+3. Inicia el servidor de desarrollo
+```bash
+npm run dev
+```
+
+
+4. Abre http://localhost:5173 en tu navegador
+
+## 🏗️ Scripts Disponibles
+
+- `dev`: Inicia el servidor de desarrollo
+- `build`: Genera la versión de producción
+- `preview`: Previsualiza la versión de producción
+- `lint`: Ejecuta el linter
+
+## 📝 Estructura del Proyecto
+src/
+├── components/ # Componentes React
+├── services/ # Servicios y llamadas API
+├── store/ # Configuración de Zustand
+├── types/ # Definiciones de tipos
+├── schema/ # Esquemas de validación Zod
+└── data/ # Datos estáticos
