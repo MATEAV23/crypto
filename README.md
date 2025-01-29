@@ -67,10 +67,11 @@ npm run dev
 - `lint`: Ejecuta el linter
 
 ## 📝 Estructura del Proyecto
-src/
+```src/
 ├── components/ # Componentes React
 ├── services/ # Servicios y llamadas API
 ├── store/ # Configuración de Zustand
 ├── types/ # Definiciones de tipos
 ├── schema/ # Esquemas de validación Zod
 └── data/ # Datos estáticos
+```
